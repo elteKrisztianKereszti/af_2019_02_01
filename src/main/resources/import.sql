@@ -10,7 +10,8 @@ insert into issue (title, description, place, created_at, updated_at) values ('B
 
 
 
-insert into message (text, created_at, updated_at) values ('The things', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into message (text, created_at, updated_at) values ('that should', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into message (text, created_at, updated_at) values ('not', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into message (text, created_at, updated_at) values ('be', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into message (issue_id, text, created_at, updated_at) values (1, 'The things', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into message (issue_id, text, created_at, updated_at) values (2, 'that should', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into message (issue_id, text, created_at, updated_at) values (3, 'not', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into message (issue_id, text, created_at, updated_at) values (3, 'be', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+
