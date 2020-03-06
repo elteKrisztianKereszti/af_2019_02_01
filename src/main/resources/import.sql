@@ -16,3 +16,9 @@ insert into label (text, created_at, updated_at) values ('labilis', CURRENT_TIME
 insert into label (text, created_at, updated_at) values ('e', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into label (text, created_at, updated_at) values ('az', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into label (text, created_at, updated_at) values ('illabilis', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+
+insert into issue_labels (issues_id, labels_id) values (1, 1);
+insert into issue_labels (issues_id, labels_id) values (1, 2);
+insert into issue_labels (issues_id, labels_id) values (2, 1);
+insert into issue_labels (issues_id, labels_id) values (1, 4);
+insert into issue_labels (issues_id, labels_id) values (3, 2);

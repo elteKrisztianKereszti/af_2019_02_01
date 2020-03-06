@@ -5,12 +5,15 @@
  */
 package hu.elte.issuetracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDateTime;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -46,5 +49,8 @@ public class Label {
     @UpdateTimestamp
     private LocalDateTime updated_at;
 
+    @ManyToMany(mappedBy = "labels")
+    @JsonIgnore
+    private List<Issue> issues;
 }
 
