@@ -8,9 +8,11 @@ package hu.elte.issuetracker.controllers;
 import hu.elte.issuetracker.entities.Issue;
 import hu.elte.issuetracker.entities.Label;
 import hu.elte.issuetracker.entities.Message;
+import hu.elte.issuetracker.entities.User;
 import hu.elte.issuetracker.repositories.IssueRepository;
 import hu.elte.issuetracker.repositories.LabelRepository;
 import hu.elte.issuetracker.repositories.MessageRepository;
+import hu.elte.issuetracker.security.AuthenticatedUser;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +43,13 @@ public class IssueController {
     @Autowired
     private LabelRepository labelRepository;
     
+    @Autowired 
+    private AuthenticatedUser authenticatedUser;
+    
     @GetMapping("")
     public ResponseEntity<Iterable<Issue>> getAll() {
+        // Just test, later will be used
+        User user = authenticatedUser.getUser();
         return ResponseEntity.ok(issueRepository.findAll());
     }
     
