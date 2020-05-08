@@ -7,6 +7,7 @@ package hu.elte.issuetracker.controllers;
 
 import hu.elte.issuetracker.entities.User;
 import hu.elte.issuetracker.repositories.UserRepository;
+import hu.elte.issuetracker.security.AuthenticatedUser;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,9 @@ public class UserController {
   @Autowired
   private BCryptPasswordEncoder passwordEncoder;
 
+  @Autowired 
+  private AuthenticatedUser authenticatedUser;
+  
   @Autowired
   private UserRepository userRepository;
   
@@ -46,6 +50,6 @@ public class UserController {
 
   @PostMapping("login")
   public ResponseEntity login(@RequestBody User user) {
-      return ResponseEntity.ok().build();
+      return ResponseEntity.ok(authenticatedUser.getUser());
   } 
 }
