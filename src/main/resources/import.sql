@@ -6,6 +6,8 @@ insert into issue (title, description, place, created_at, updated_at) values ('T
 insert into issue (title, description, place, created_at, updated_at) values ('MegaIssue', 'MegaFatal', 'PC12', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into issue (title, description, place, created_at, updated_at) values ('Unknown issue', 'U.F.O', 'Air', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into issue (title, description, place, created_at, updated_at) values ('Broken Windows 10', 'Everywhere', 'PCxxx', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into issue (title, description, place, created_at, updated_at) values ('DeleteMe01', 'Nem jo a WiFi', 'PC04', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+insert into issue (title, description, place, created_at, updated_at) values ('DeleteMe02', 'Nem jo a WiFi', 'PC04', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 
 insert into message (issue_id, text, created_at, updated_at) values (1, 'The things', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into message (issue_id, text, created_at, updated_at) values (2, 'that should', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
